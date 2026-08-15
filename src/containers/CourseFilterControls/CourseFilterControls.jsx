@@ -56,6 +56,7 @@ export const CourseFilterControls = () => {
       <Button
         ref={setTargetRef}
         variant="outline-primary"
+        size="sm"
         iconBefore={Tune}
         onClick={openFiltersOptions}
         disabled={!hasCourses}

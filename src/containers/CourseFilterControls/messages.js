@@ -54,7 +54,7 @@ const messages = defineMessages({
   refine: {
     id: 'learner-dash.courseListFilters.refine',
     description: 'Filter button container text',
-    defaultMessage: 'Refine',
+    defaultMessage: 'Filters',
   },
 });
 

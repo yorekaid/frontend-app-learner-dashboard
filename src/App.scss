@@ -15,15 +15,25 @@ $input-focus-box-shadow: var(--pgn-elevation-form-input-base); // hack to get up
   white-space: nowrap;
 }
 
+body,
+#root {
+  font-family: var(--pgn-typography-font-family-base, 'Inter', sans-serif);
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  min-height: 100vh;
+  padding-bottom: 80px; /* Space for fixed footer */
+}
+
 .alert.alert-info .alert-icon {
   color: black;
 }
 
 #root {
+
   // Removing a odd 1.5 scaling on checkboxes.:
   input[type=checkbox] {
     transform: none;
   }
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -42,6 +52,7 @@ $input-focus-box-shadow: var(--pgn-elevation-form-input-base); // hack to get up
       top: 0.1em;
       height: 1.75rem;
       margin-right: 1rem;
+
       img {
         display: block;
         height: 100%;
@@ -60,6 +71,7 @@ $input-focus-box-shadow: var(--pgn-elevation-form-input-base); // hack to get up
       right: 1rem !important;
     }
   }
+
   .confirm-modal .pgn__modal-body {
     overflow: hidden;
   }

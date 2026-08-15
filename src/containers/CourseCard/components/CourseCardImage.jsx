@@ -20,7 +20,7 @@ export const CourseCardImage = ({ cardId, orientation }) => {
   const { homeUrl } = courseData?.courseRun || {};
   const { disableCourseTitle } = useActionDisabledState(cardId);
   const handleImageClicked = useCourseTrackingEvent(courseImageClicked, cardId, homeUrl);
-  const wrapperClassName = `pgn__card-wrapper-image-cap d-inline-block overflow-visible ${orientation}`;
+  const wrapperClassName = `pgn__card-wrapper-image-cap d-inline-block overflow-visible position-relative ${orientation}`;
   const image = (
     <>
       <img

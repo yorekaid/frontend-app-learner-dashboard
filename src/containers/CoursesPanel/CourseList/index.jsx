@@ -22,15 +22,17 @@ export const CourseList = ({ courseListData }) => {
           <ActiveCourseFilters />
         </div>
       )}
-      <div className="d-flex flex-column flex-grow-1">
-        {visibleList.map(({ cardId }) => (
-          <CourseCard key={cardId} cardId={cardId} />
-        ))}
+      <div className="d-flex flex-column flex-grow-1 mb-5">
+        <div className="course-cards-grid mb-0">
+          {visibleList.map(({ cardId }) => (
+            <CourseCard key={cardId} cardId={cardId} />
+          ))}
+        </div>
         {numPages > 1 && (
           <Pagination
             variant={isCollapsed ? 'reduced' : 'secondary'}
             paginationLabel="Course List"
-            className="mx-auto mb-2"
+            className="mx-auto mb-0 mt-3"
             pageCount={numPages}
             onPageSelect={setPageNumber}
           />

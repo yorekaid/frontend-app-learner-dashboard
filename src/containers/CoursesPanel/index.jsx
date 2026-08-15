@@ -64,7 +64,9 @@ export const CoursesPanel = () => {
           <CourseFilterControls />
         </div>
       </div>
-      {hasCourses ? <CourseListSlot courseListData={courseListData} /> : <NoCoursesViewSlot />}
+      <div className="mt-3 " style={{ borderRadius: '13px', border: '1px solid var(--color-accent-soft)' }}>
+        {hasCourses ? <CourseListSlot courseListData={courseListData} /> : <NoCoursesViewSlot />}
+      </div>
     </div>
   );
 };

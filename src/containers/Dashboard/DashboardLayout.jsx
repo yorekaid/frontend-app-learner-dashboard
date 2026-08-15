@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 
 import { Container, Col, Row } from '@openedx/paragon';
 
-import WidgetSidebarSlot from 'plugin-slots/WidgetSidebarSlot';
-
-import hooks from './hooks';
-
 export const columnConfig = {
   courseList: {
     withSidebar: {
@@ -25,23 +21,11 @@ export const columnConfig = {
 };
 
 export const DashboardLayout = ({ children }) => {
-  const {
-    isCollapsed,
-    sidebarShowing,
-  } = hooks.useDashboardLayoutData();
-
-  const courseListColumnProps = sidebarShowing
-    ? columnConfig.courseList.withSidebar
-    : columnConfig.courseList.noSidebar;
-
   return (
-    <Container fluid size="xl">
+    <Container fluid>
       <Row>
-        <Col {...courseListColumnProps} className="course-list-column">
+        <Col {...columnConfig.courseList.noSidebar} className="course-list-column">
           {children}
-        </Col>
-        <Col {...columnConfig.sidebar} className={['sidebar-column', !isCollapsed && 'not-collapsed']}>
-          <WidgetSidebarSlot />
         </Col>
       </Row>
     </Container>

@@ -43,12 +43,13 @@ export const CourseCardMenu = ({ cardId }) => {
         <Dropdown.Toggle
           id={`course-actions-dropdown-${cardId}`}
           as={IconButton}
+          size="sm"
           src={MoreVert}
           iconAs={Icon}
           variant="primary"
           alt={formatMessage(messages.dropdownAlt)}
         />
-        <Dropdown.Menu>
+        <Dropdown.Menu className="small">
           {shouldShowUnenrollItem && (
             <Dropdown.Item
               disabled={isMasquerading}

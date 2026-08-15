@@ -8,6 +8,9 @@
 .course-list-title {
   font-size: var(--pgn-typography-font-size-h2-base);
   margin: var(--pgn-spacing-spacer-3) 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #212529;
 }
 
 .course-list-loading {
@@ -37,4 +40,11 @@
     font-size: var(--pgn-typography-font-size-h3-base);
     margin: var(--pgn-spacing-spacer-2) 0;
   }
+}
+
+.course-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--pgn-spacing-spacer-4);
+  margin-bottom: var(--pgn-spacing-spacer-4);
 }

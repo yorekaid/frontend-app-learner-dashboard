@@ -33,7 +33,9 @@ export const App = () => {
       </Helmet>
       <div>
         <AppWrapper>
-          <LearnerDashboardHeader />
+          <div style={{ position: 'sticky', top: 0, zIndex: 1000, backgroundColor: 'white', borderBottom: '1px solid #e0e0e0' }}>
+            <LearnerDashboardHeader />
+          </div>
           <main id="main">
             {hasNetworkFailure
               ? (
@@ -45,7 +47,9 @@ export const App = () => {
               )}
           </main>
         </AppWrapper>
-        <FooterSlot />
+        <div style={{ position: 'fixed', bottom: 0, width: '100%', zIndex: 1000 }}>
+          <FooterSlot />
+        </div>
       </div>
     </>
   );
