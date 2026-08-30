@@ -97,7 +97,7 @@ export const CourseFilterControls = () => {
             >
               <div
                 id="course-filter-controls-card"
-                className="bg-white p-3 rounded shadow d-flex flex-row"
+                className="p-3 rounded shadow d-flex flex-row"
               >
                 <div className="filter-form-col">
                   <FilterForm {...{ filters, handleFilterChange }} />

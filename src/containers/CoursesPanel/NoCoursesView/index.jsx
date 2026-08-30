@@ -31,6 +31,7 @@ export const NoCoursesView = () => {
         as="a"
         href={baseAppUrl(courseSearchUrl)}
         iconBefore={Search}
+        style={{ fontSize: '14px' }}
       >
         {formatMessage(messages.exploreCoursesButton)}
       </Button>

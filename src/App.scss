@@ -6,8 +6,8 @@ $fa-font-path: "~font-awesome/fonts";
 
 $input-focus-box-shadow: var(--pgn-elevation-form-input-base); // hack to get upgrade to paragon 4.0.0 to work
 
-@import "~@edx/frontend-component-header/dist/index";
-@import "~@edx/frontend-component-footer/dist/_footer";
+@import "~@yorekaid/frontend-component-header/dist/index";
+@import "~@yorekaid/frontend-component-footer/dist/_footer";
 
 .text-ellipsis {
   overflow: hidden;
@@ -20,7 +20,8 @@ body,
   font-family: var(--pgn-typography-font-family-base, 'Inter', sans-serif);
   background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
   min-height: 100vh;
-  padding-bottom: 80px; /* Space for fixed footer */
+  padding-bottom: 80px;
+  /* Space for fixed footer */
 }
 
 .alert.alert-info .alert-icon {
@@ -50,7 +51,7 @@ body,
       box-sizing: content-box;
       position: relative;
       top: 0.1em;
-      height: 1.75rem;
+      height: 3.15rem;
       margin-right: 1rem;
 
       img {
@@ -74,5 +75,171 @@ body,
 
   .confirm-modal .pgn__modal-body {
     overflow: hidden;
+  }
+}
+// Dark mode overrides
+body.dashboard-dark-mode {
+  /* Brand color overrides for dark mode (#9D0054 -> Teal) */
+  --pgn-color-brand-base: #2dd4bf !important;
+  --pgn-color-primary: #2dd4bf !important;
+  --pgn-color-primary-light: #5eead4 !important;
+  --pgn-color-primary-dark: #14b8a6 !important;
+  --pgn-color-primary-hover: #5eead4 !important;
+  --pgn-color-primary-active: #14b8a6 !important;
+  --pgn-color-primary-focus: #2dd4bf !important;
+
+  .btn-brand,
+  .btn-primary {
+    background-color: var(--pgn-color-brand-base) !important;
+    border-color: var(--pgn-color-brand-base) !important;
+    color: #ffffff !important;
+    
+    &:hover {
+      background-color: var(--pgn-color-primary-hover) !important;
+      border-color: var(--pgn-color-primary-hover) !important;
+    }
+  }
+
+  .btn-outline-brand,
+  .btn-outline-primary {
+    color: var(--pgn-color-brand-base) !important;
+    border-color: var(--pgn-color-brand-base) !important;
+
+    &:hover {
+      background-color: var(--pgn-color-brand-base) !important;
+      color: #131c2e !important;
+    }
+  }
+
+  .btn-link {
+    color: var(--pgn-color-brand-base) !important;
+    &:hover {
+      color: var(--pgn-color-primary-light) !important;
+    }
+  }
+
+  .badge,
+  .pgn__chip {
+    background-color: #1e2d45 !important;
+    color: #dde3ed !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    
+    button {
+      color: #dde3ed !important;
+      &:hover {
+        color: #ff6b9e !important; /* Slightly red/pink on close hover */
+      }
+    }
+  }
+
+  .form-control,
+  .form-select,
+  .form-check-input {
+    background-color: #1e2d45 !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #dde3ed !important;
+
+    &:focus {
+      border-color: var(--pgn-color-brand-base) !important;
+      box-shadow: 0 0 0 0.25rem rgba(45, 212, 191, 0.25) !important; /* Teal focus */
+    }
+  }
+
+  .form-check-input:checked {
+    background-color: var(--pgn-color-brand-base) !important;
+    border-color: var(--pgn-color-brand-base) !important;
+  }
+
+  background: linear-gradient(135deg, #131c2e 0%, #0d1526 100%);
+  color: #dde3ed !important;
+
+  /* Global font overrides */
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6,
+  p, span, div, li {
+    color: #dde3ed;
+  }
+
+  .text-dark {
+    color: #dde3ed !important;
+  }
+
+  /* Headings with specific accent color */
+  .course-list-title,
+  h1, h2, h3,
+  .h1, .h2, .h3 {
+    color: #c9d8ed !important;
+  }
+
+  .text-muted,
+  .pgn__icon {
+    color: #8fa8c8 !important;
+  }
+
+  #root {
+    background: transparent;
+  }
+
+  .dashboard-sticky-header {
+    background-color: #131c2e !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .course-card {
+    .card {
+      background-color: #1e2d45;
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      color: #dde3ed;
+
+      &:hover {
+        background-color: #253550;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  /* Override inline background: white for CourseCardMenu wrapper */
+  .course-card-menu-wrapper {
+    background-color: #1e2d45 !important;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  a.course-card-title,
+  span.course-card-title {
+    color: #c9d8ed !important;
+  }
+
+  a {
+    color: #5a9fd4;
+    &:hover {
+      color: #92c5eb;
+    }
+  }
+
+  #no-courses-content-view {
+    border-color: rgba(255, 255, 255, 0.08);
+    background-color: #1e2d45;
+    color: #dde3ed;
+  }
+
+  .pgn__sheet-component,
+  .dropdown-menu {
+    background-color: #1e2d45;
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #dde3ed;
+  }
+
+  .dropdown-item,
+  a.dropdown-item {
+    color: #c9d8ed !important;
+  }
+
+  .dropdown-item:hover,
+  a.dropdown-item:hover,
+  .dropdown-item:focus,
+  a.dropdown-item:focus {
+    background-color: rgba(90, 159, 212, 0.2) !important;
+    color: #ffffff !important;
   }
 }

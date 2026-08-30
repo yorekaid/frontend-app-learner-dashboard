@@ -4,13 +4,14 @@ import { Helmet } from 'react-helmet';
 import { useIntl } from '@edx/frontend-platform/i18n';
 
 import { ErrorPage } from '@edx/frontend-platform/react';
-import { FooterSlot } from '@edx/frontend-component-footer';
+import { FooterSlot } from '@yorekaid/frontend-component-footer';
 import { Alert } from '@openedx/paragon';
 
 import Dashboard from 'containers/Dashboard';
 
 import AppWrapper from 'containers/AppWrapper';
 import LearnerDashboardHeader from 'containers/LearnerDashboardHeader';
+import { ThemeProvider } from './ThemeContext';
 
 import { getConfig } from '@edx/frontend-platform';
 import { useInitializeLearnerHome } from 'data/hooks';
@@ -31,9 +32,10 @@ export const App = () => {
         <title>{formatMessage(messages.pageTitle)}</title>
         <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
       </Helmet>
-      <div>
+      <ThemeProvider>
+        <div>
         <AppWrapper>
-          <div style={{ position: 'sticky', top: 0, zIndex: 1000, backgroundColor: 'white', borderBottom: '1px solid #e0e0e0' }}>
+          <div style={{ position: 'sticky', top: 0, zIndex: 1000, borderBottom: '1px solid var(--pgn-color-light-400, #e0e0e0)' }} className="dashboard-sticky-header">
             <LearnerDashboardHeader />
           </div>
           <main id="main">
@@ -51,6 +53,7 @@ export const App = () => {
           <FooterSlot />
         </div>
       </div>
+      </ThemeProvider>
     </>
   );
 };
