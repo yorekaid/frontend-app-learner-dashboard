@@ -19,7 +19,18 @@ body {
   font-family: var(--pgn-typography-font-family-base) !important;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-family: var(--pgn-typography-font-family-heading) !important;
 }
 
@@ -34,7 +45,7 @@ body,
   font-family: var(--pgn-typography-font-family-base, 'Inter', sans-serif);
   background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
   min-height: 100vh;
-  padding-bottom: 80px;
+  padding-bottom: 25px;
   /* Space for fixed footer */
 }
 
@@ -91,6 +102,7 @@ body,
     overflow: hidden;
   }
 }
+
 // Dark mode overrides
 body.dashboard-dark-mode {
   /* Brand color overrides for dark mode */
@@ -102,7 +114,9 @@ body.dashboard-dark-mode {
   --pgn-color-primary-active: #0077e6 !important;
   --pgn-color-primary-focus: #2693ff !important;
 
-  .btn:disabled, .btn.disabled, button:disabled {
+  .btn:disabled,
+  .btn.disabled,
+  button:disabled {
     background-color: #10263a !important;
     border-color: #10263a !important;
     color: #8fa8c8 !important;
@@ -113,9 +127,10 @@ body.dashboard-dark-mode {
   .btn-primary {
     background-color: var(--pgn-color-brand-base) !important;
     border-color: var(--pgn-color-brand-base) !important;
-    color: #131c2e !important; /* Dark navy text for high contrast on Teal */
+    color: #131c2e !important;
+    /* Dark navy text for high contrast on Teal */
     font-weight: 600 !important;
-    
+
     &:hover {
       background-color: var(--pgn-color-primary-hover) !important;
       border-color: var(--pgn-color-primary-hover) !important;
@@ -130,7 +145,8 @@ body.dashboard-dark-mode {
     font-size: 13px !important;
     padding: 0.35rem 0.75rem !important;
 
-    svg, .pgn__icon {
+    svg,
+    .pgn__icon {
       fill: var(--pgn-color-brand-base) !important;
       color: var(--pgn-color-brand-base) !important;
     }
@@ -138,7 +154,9 @@ body.dashboard-dark-mode {
     &:hover {
       background-color: var(--pgn-color-brand-base) !important;
       color: #131c2e !important;
-      svg, .pgn__icon {
+
+      svg,
+      .pgn__icon {
         fill: #131c2e !important;
         color: #131c2e !important;
       }
@@ -147,6 +165,7 @@ body.dashboard-dark-mode {
 
   .btn-link {
     color: var(--pgn-color-brand-base) !important;
+
     &:hover {
       color: var(--pgn-color-primary-light) !important;
     }
@@ -157,11 +176,13 @@ body.dashboard-dark-mode {
     background-color: #1e2d45 !important;
     color: #dde3ed !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    
+
     button {
       color: #dde3ed !important;
+
       &:hover {
-        color: #ff6b9e !important; /* Slightly red/pink on close hover */
+        color: #ff6b9e !important;
+        /* Slightly red/pink on close hover */
       }
     }
   }
@@ -175,7 +196,8 @@ body.dashboard-dark-mode {
 
     &:focus {
       border-color: var(--pgn-color-brand-base) !important;
-      box-shadow: 0 0 0 0.25rem rgba(45, 212, 191, 0.25) !important; /* Teal focus */
+      box-shadow: 0 0 0 0.25rem rgba(45, 212, 191, 0.25) !important;
+      /* Teal focus */
     }
   }
 
@@ -189,41 +211,73 @@ body.dashboard-dark-mode {
     background-color: rgba(255, 255, 255, 0.05) !important;
     color: #dde3ed !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    
+
     .alert-heading,
-    h1, h2, h3, h4, h5, h6,
-    p, span, div {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    div {
       color: #dde3ed !important;
     }
   }
 
   .alert-info {
     border-left: 4px solid #38bdf8 !important;
-    .alert-icon { color: #38bdf8 !important; }
+
+    .alert-icon {
+      color: #38bdf8 !important;
+    }
   }
 
   .alert-warning {
     border-left: 4px solid #fbbf24 !important;
-    .alert-icon { color: #fbbf24 !important; }
+
+    .alert-icon {
+      color: #fbbf24 !important;
+    }
   }
 
   .alert-success {
     border-left: 4px solid #34d399 !important;
-    .alert-icon { color: #34d399 !important; }
+
+    .alert-icon {
+      color: #34d399 !important;
+    }
   }
 
   .alert-danger {
     border-left: 4px solid #f87171 !important;
-    .alert-icon { color: #f87171 !important; }
+
+    .alert-icon {
+      color: #f87171 !important;
+    }
   }
 
   background: #06111d !important;
   color: #dde3ed !important;
 
   /* Global font overrides */
-  h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6,
-  p, span, div, li {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  p,
+  span,
+  div,
+  li {
     color: #dde3ed;
   }
 
@@ -233,8 +287,12 @@ body.dashboard-dark-mode {
 
   /* Headings with specific accent color */
   .course-list-title,
-  h1, h2, h3,
-  .h1, .h2, .h3 {
+  h1,
+  h2,
+  h3,
+  .h1,
+  .h2,
+  .h3 {
     color: #c9d8ed !important;
   }
 
@@ -252,24 +310,126 @@ body.dashboard-dark-mode {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   }
 
-  .course-card {
-    .card {
-      background-color: #1e2d45;
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      color: #dde3ed;
+  /* Fix for SearchField and DataTable */
+  .pgn__search-field .form-control {
+    background-color: #1e2d45 !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #dde3ed !important;
+  }
 
-      &:hover {
-        background-color: #253550;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  .pgn__data-table-wrapper,
+  .pgn__data-table-status-bar,
+  .pgn__data-table-actions {
+    background-color: transparent !important;
+    color: #dde3ed !important;
+  }
+
+  .course-card.card,
+  .course-card .card {
+    background-color: #1e2d45;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #dde3ed;
+
+    &:hover {
+      background-color: #253550;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    [class^="pgn__card-header-title"],
+    [class*=" pgn__card-header-title"] {
+      color: #c9d8ed !important;
+    }
+
+    [class^="pgn__card-header-subtitle"],
+    [class*=" pgn__card-header-subtitle"],
+    [class^="pgn__card-footer"],
+    [class*=" pgn__card-footer"] {
+      color: #8fa8c8 !important;
+    }
+  }
+
+  .pgn__data-table-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #8fa8c8 !important;
+
+    .btn {
+      color: #dde3ed !important;
+    }
+  }
+
+  /* Course About Page Styles */
+  .course-about-intro .card,
+  .course-about-overview .card,
+  .course-sidebar-wrapper .card {
+    background-color: #1e2d45;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #dde3ed;
+  }
+
+  /* Subtitle color fix for dark mode */
+  .course-about-intro, .course-sidebar-wrapper {
+    [class^="pgn__card-header-subtitle"] {
+      color: #a0aec0 !important;
+    }
+  }
+
+  /* Adjust Enroll Now button position and size */
+  .course-about-intro .card-footer {
+    margin-top: 15px;
+
+    button {
+      font-size: 15px !important;
+      padding: 0.5rem 1rem !important;
+    }
+  }
+
+  .course-about-overview .teacher {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .teacher-image {
+      width: 8rem;
+
+      img {
+        min-height: 100%;
+        max-width: 100%;
+        margin-inline-end: 0.5rem;
       }
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .course-about-overview {
+
+    /* Override wysiwyg inline styles to support dark mode */
+    .wysiwyg-content {
+
+      &,
+      .xmodule_AboutBlock,
+      .xblock-student_view-about,
+      * {
+        color: #dde3ed !important;
+        background-color: transparent !important;
+      }
+    }
+
+    iframe {
+      filter: invert(1) hue-rotate(180deg);
+      mix-blend-mode: screen;
     }
   }
 
   /* Override inline background: white for CourseCardMenu wrapper */
   .course-card-menu-wrapper {
     background-color: #1e2d45 !important;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   /* Filter Controls Popover */
@@ -282,7 +442,7 @@ body.dashboard-dark-mode {
     hr {
       border-color: rgba(255, 255, 255, 0.08) !important;
     }
-    
+
     .filter-form-heading {
       color: #c9d8ed !important;
     }
@@ -295,6 +455,7 @@ body.dashboard-dark-mode {
 
   a {
     color: #5a9fd4;
+
     &:hover {
       color: #92c5eb;
     }

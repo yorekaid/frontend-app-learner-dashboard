@@ -6,6 +6,7 @@ import { useIntl } from '@edx/frontend-platform/i18n';
 import { ErrorPage } from '@edx/frontend-platform/react';
 import { FooterSlot } from '@yorekaid/frontend-component-footer';
 import { Alert } from '@openedx/paragon';
+import { Outlet } from 'react-router-dom';
 
 import Dashboard from 'containers/Dashboard';
 
@@ -45,7 +46,7 @@ export const App = () => {
                   <ErrorPage message={formatMessage(messages.errorMessage, { supportEmail })} />
                 </Alert>
               ) : (
-                <Dashboard />
+                <Outlet />
               )}
           </main>
         </AppWrapper>

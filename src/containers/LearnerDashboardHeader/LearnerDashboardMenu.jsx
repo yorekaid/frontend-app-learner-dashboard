@@ -24,7 +24,7 @@ const getLearnerHeaderMenu = (
     }] : []),
     ...(!getConfig().NON_BROWSABLE_COURSES ? [{
       type: 'item',
-      href: `${urls.baseAppUrl(courseSearchUrl)}`,
+      href: '/learner-dashboard/explore-courses',
       content: formatMessage(messages.discoverNew),
       onClick: (e) => {
         exploreCoursesClick(e);

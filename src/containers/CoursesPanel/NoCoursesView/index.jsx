@@ -29,7 +29,7 @@ export const NoCoursesView = () => {
       <Button
         variant="brand"
         as="a"
-        href={baseAppUrl(courseSearchUrl)}
+        href="/learner-dashboard/explore-courses"
         iconBefore={Search}
         style={{ fontSize: '14px' }}
       >

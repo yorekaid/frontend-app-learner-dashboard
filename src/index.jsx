@@ -28,6 +28,9 @@ import { configuration } from './config';
 import messages from './i18n';
 
 import App from './App';
+import Dashboard from './containers/Dashboard';
+import CatalogCoursesPage from './explore-courses/CatalogCoursesPage';
+import CourseAboutPage from './course-about/CourseAboutPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -46,8 +49,12 @@ subscribe(APP_READY, () => {
         <ContextProviders>
           <QueryClientProvider client={queryClient}>
             <Routes>
-              <Route path="/" element={<PageWrap><App /></PageWrap>} />
-              <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="/" element={<PageWrap><App /></PageWrap>}>
+                <Route index element={<Dashboard />} />
+                <Route path="explore-courses" element={<CatalogCoursesPage />} />
+                <Route path="courses/:courseId/about" element={<CourseAboutPage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Route>
             </Routes>
           </QueryClientProvider>
         </ContextProviders>
