@@ -40,7 +40,7 @@ export const ReasonPane = ({
         {option(constants.reasonKeys.preferNotToSay)}
       </Form.RadioSet>
       <ActionRow>
-        <Button variant="tertiary" onClick={handleClose}>
+        <Button variant="tertiary" className="cancel-btn" onClick={handleClose}>
           {formatMessage(messages.confirmCancel)}
         </Button>
         <Button onClick={reason.handleSubmit}>

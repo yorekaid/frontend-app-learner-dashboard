@@ -31,10 +31,11 @@ export const UnenrollConfirmModal = ({
       onClose={nullMethod}
       hasCloseButton={false}
       isFullscreenOnMobile={showFullscreen}
+      className="unenroll-confirm-modal"
       title=""
     >
       <div
-        className={classNames('bg-white p-3 rounded', { shadow: !showFullscreen })}
+        className={classNames('p-3 rounded', { shadow: !showFullscreen })}
         style={{ textAlign: 'start' }}
       >
         {(modalState === modalStates.confirm) && (

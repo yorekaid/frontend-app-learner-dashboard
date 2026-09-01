@@ -24,7 +24,7 @@ export const ConfirmPane = ({
       <h4>{formatMessage(messages.confirmHeader)}</h4>
       <p className="py-2">{formatMessage(messages.confirmText, { courseTitle })}</p>
       <ActionRow>
-        <Button variant="tertiary" onClick={handleClose}>
+        <Button variant="tertiary" className="cancel-btn" onClick={handleClose}>
           {formatMessage(messages.confirmCancel)}
         </Button>
         <Button onClick={handleConfirm}>

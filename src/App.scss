@@ -369,7 +369,8 @@ body.dashboard-dark-mode {
   }
 
   /* Subtitle color fix for dark mode */
-  .course-about-intro, .course-sidebar-wrapper {
+  .course-about-intro,
+  .course-sidebar-wrapper {
     [class^="pgn__card-header-subtitle"] {
       color: #a0aec0 !important;
     }
@@ -467,11 +468,17 @@ body.dashboard-dark-mode {
     color: #dde3ed;
   }
 
+  .modal-content,
+  .modal-header,
+  .modal-footer,
+  .pgn__modal,
+  .pgn__modal-content,
+  .pgn__modal-body,
   .pgn__sheet-component,
   .dropdown-menu {
-    background-color: #1e2d45;
-    border-color: rgba(255, 255, 255, 0.08);
-    color: #dde3ed;
+    background-color: #1e2d45 !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    color: #dde3ed !important;
   }
 
   .dropdown-item,
@@ -485,5 +492,24 @@ body.dashboard-dark-mode {
   a.dropdown-item:focus {
     background-color: rgba(90, 159, 212, 0.2) !important;
     color: #ffffff !important;
+  }
+}
+
+/* Unenroll Modal Specific Styles */
+.unenroll-confirm-modal {
+  .btn {
+    font-size: 15px !important;
+  }
+  
+  .cancel-btn {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #fff !important;
+    
+    &:hover, &:focus, &:active {
+      background-color: #bb2d3b !important;
+      border-color: #b02a37 !important;
+      color: #fff !important;
+    }
   }
 }
